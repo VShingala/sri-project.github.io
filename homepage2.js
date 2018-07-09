@@ -27,7 +27,7 @@ $(document).ready(function(){
 		$('#max_run').val('');
 		$('#priority').val('');
 		
-		url_input = "http://sri-project.herokuapp.com/webapi/handler/"+process+"/"+max_arrival_time+"/"+max_run_time+"/"+priority;
+		url_input = "https://sri-project.herokuapp.com/webapi/handler/"+process+"/"+max_arrival_time+"/"+max_run_time+"/"+priority;
 
 		$.getJSON(url_input, function(result){
 			
