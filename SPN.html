@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title>Job Scheduling Algorithms</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link href="jobschedulingpage.css" rel="stylesheet" type="text/css" />	 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+</head>
+
+
+
+<body>
+
+	<div class="icon-bar">
+		<a class="active" href="mainpage1.html"><i class="fa fa-home"></i></a> 
+		<a href="homepage2.html">Create Charts</a>
+		<a href="jobschedulingpage.html">Job Scheduling Algorithms</a>
+		<a href="pagereplacementpage.html">Page Replacement Algorithms</a>
+		<a href="aboutuspage.html">About</a>
+	</div>
+	
+	<div class="sidenav">	
+	  <a class="active" href="mainpage1.html"><i class="fa fa-home"></i></a> 
+	  <a href="jobschedulingpage.html">First Come First Serve</a>
+	  <a href="SJF.html">Shortest Job First</a>
+	  <a href="SRTN.html">Shortest Remaining Time Next</a>
+	  <a href="RR.html">Round Robin Scheduling</a>
+	  <a href="PS.html">Priority Scheduling</a>
+	  <a href="SPN.html">Shortest Process Next</a>
+	</div>
+
+
+	<div class="main">
+		
+		<br>
+		<h4>Shortest Process Next</h4>
+		Shortest job first always produces the minimum average response time for batch systems, it
+		would be nice if it could be used for interactive processes as well. To a certain extent, it can be.
+		Interactive processes generally follow the pattern of wait for command, execute command, wait for
+		command, execute command, and so on. If we regard the execution of each command as a separate “job,”
+		then we could minimize overall response time by running the shortest one first. The only problem is
+		figuring out which of the currently runnable processes is the shortest one.
+		One approach is to make estimates based on past behavior and run the process with the shortest estimated
+		running time. Suppose that the estimated time per command for some terminal is T0. Now suppose its next
+		run is measured to be T1. We could update our estimate by taking a weighted sum of these two numbers,
+		that is, aT0 + (1 − a)T1. Through the choice of a we can decide to have the estimation process forget old
+		runs quickly, or remember them for a long time. With a = 1/2, we get successive estimates of
+		T0, T0/2 + T1/2, T0/4 + T1/4 + T2/2, T0/8 + T1/8 + T2/4 + T3/2
+		After three new runs, the weight of T0 in the new estimate has dropped to 1/8.
+		The technique of estimating the next value in a series by taking the weighted average of the current
+		measured value and the previous estimate is sometimes called aging. It is applicable to many situations
+		where a prediction must be made based on previous values. Aging is especially easy to implement when
+		a = 1/2. All that is needed is to add the new value to the current estimate and divide the sum by 2 (by
+		shifting it right 1 bit).
+		<br>
+	</div>
+	<script src="jobschedulingpage.js"></script>
+
+</body>
+
+
+
+</html>

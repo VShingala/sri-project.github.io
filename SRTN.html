@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title>Job Scheduling Algorithms</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link href="jobschedulingpage.css" rel="stylesheet" type="text/css" />	 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+</head>
+
+
+
+<body>
+
+	<div class="icon-bar">
+		<a class="active" href="mainpage1.html"><i class="fa fa-home"></i></a> 
+		<a href="homepage2.html">Create Charts</a>
+		<a href="jobschedulingpage.html">Job Scheduling Algorithms</a>
+		<a href="pagereplacementpage.html">Page Replacement Algorithms</a>
+		<a href="aboutuspage.html">About</a>
+	</div>
+	
+	<div class="sidenav">	
+	  <a class="active" href="mainpage1.html"><i class="fa fa-home"></i></a> 
+	  <a href="jobschedulingpage.html">First Come First Serve</a>
+	  <a href="SJF.html">Shortest Job First</a>
+	  <a href="SRTN.html">Shortest Remaining Time Next</a>
+	  <a href="RR.html">Round Robin Scheduling</a>
+	  <a href="PS.html">Priority Scheduling</a>
+	  <a href="SPN.html">Shortest Process Next</a>
+	</div>
+
+
+	<div class="main">
+		<br>
+		<h4>Shortest Remaining Time Next</h4>
+		<ul>
+			<li>Shortest remaining time (SRT) is the preemptive version of the SJN algorithm.</li>
+			<li>The processor is allocated to the job closest to completion but it can be preempted by a newer ready job with shorter time to completion.</li>
+			<li>Impossible to implement in interactive systems where required CPU time is not known.</li>
+			<li>It is often used in batch environments where short jobs need to give preference.</li>
+		</ul>
+		<br>
+	</div>
+	<script src="jobschedulingpage.js"></script>
+
+</body>
+
+
+
+</html>

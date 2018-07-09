@@ -1,0 +1,93 @@
+body{
+	background-color :#ffffff;
+	color:#595959;
+	margin : 0;
+}
+h2{
+	font-size: 40px;
+}
+
+p{
+	font-size: 18px;
+}
+
+.split {
+  height: 100%;
+  width: 40%;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #80ccff;
+}
+
+/* Control the right side */
+.right {
+  right: 10%;
+  background-color: white;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 750px;
+  height: 350px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #595959;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  text-decoration:none;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  text-decoration:none;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  text-decoration:none;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  text-decoration:none;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+  text-decoration:none;
+}

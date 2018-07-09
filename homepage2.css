@@ -1,0 +1,197 @@
+#process{
+	width: 50%;
+	text-align: center;
+}
+
+#submit1{
+	width: 10%;
+	margin-top : 2%;
+	margin-left : 200px;
+}
+
+#min_run , #max_run , #priority,#page_no,#frame_size{
+	
+	margin-top : 2%;
+	width : 25%;
+}
+
+#priority{
+	margin-left : 150px;
+}
+
+#max_run{
+	margin-left : 28px;
+}
+
+#min_run{
+	margin-left : 42px;
+}
+
+#page_no{
+	margin-left : 20px;
+}
+
+#frame_size{
+	margin-left : 49px;
+}
+
+.input_1{
+	display : none; 
+}
+
+#chartContainer {
+	height: 300px;
+	width: 100%;
+}
+
+#info{
+	width: 30%;
+    padding: 5px;
+    border: 1.5px solid gray;
+	display:none;
+	float: right;
+}
+
+.spin{
+	margin-left: auto;
+    margin-right: auto;
+	display : none;
+	border: 8px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 8px solid #8c8c8c;
+	width: 75px;
+	height: 75px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#spin{
+	margin:center;
+}
+
+#submit1:hover{
+	box-shadow:0 0 8px #333;
+}
+
+#button1{
+	margin-left : 1%;
+	width: 10%;
+}
+
+#button1:hover{
+	box-shadow:0 0 8px #333;
+}
+
+body{
+	background-color : white;
+	color:#595959;
+	margin : 0;
+}
+
+h3,h4{
+	color: #333333;
+}
+
+.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #555;
+    overflow-x: hidden;
+}
+
+.sidenav a {
+	margin-left:1%;
+    padding: 12px 0;
+    text-decoration: none;
+    font-size: auto;
+	transition: all 0.3s ease;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    background-color: #000;
+}
+
+.main {
+    margin-left: 20%; /* Same as the width of the sidenav */
+    font-size: auto; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+	text-align:justify;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.container{
+	margin:center;
+}
+
+.icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: auto;
+	text-decoration: none;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #4CAF50 !important;
+	text-align:center;
+	margin-left:0%;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 600px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.at:hover .tooltiptext {
+    visibility: visible;
+}
+.pri:hover .tooltiptext {
+    visibility: visible;
+}
+
+.rt:hover .tooltiptext {
+    visibility: visible;
+}
+	

@@ -1,0 +1,130 @@
+body{
+	background-color : white;
+	color:#595959;
+	margin : 0;
+}
+
+h3,h4{
+	color: #333333;
+}
+
+.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #555;
+    overflow-x: hidden;
+}
+
+.sidenav a {
+	margin-left:1%;
+    padding: 12px 0;
+    text-decoration: none;
+    font-size: auto;
+	transition: all 0.3s ease;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    background-color: #000;
+}
+
+.main {
+    margin-left: 20%; /* Same as the width of the sidenav */
+    font-size: auto; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+	text-align:justify;
+	margin-top : 1%;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.container{
+	margin:center;
+}
+
+.icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: auto;
+	text-decoration: none;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #4CAF50 !important;
+	text-align:center;
+	margin-left:0%;
+}
+
+.hidden_data1 , .hidden_data2 ,.hidden_data3,.hidden_data4,.hidden_data5,.hidden_data6{
+	
+	display : none;
+	border:1px solid #112;
+	border-radius:5px;
+}
+
+.Optimal,.FIFO,.LRU,.SC{
+	display: block;
+	max-width : 100%;
+    margin-left: auto;
+    margin-right: auto;
+	margin:auto;
+}
+
+.data{
+	margin: 2%;
+	text-align : justify;
+}
+
+.temp{
+	width : 100%;
+}
+
+.card{
+	height : 70px;
+	width : 100%;
+}
+
+.row{
+	margin-top : 2%;
+}
+
+#c1 , #c2{
+	background-color : #f2f2f2;
+	color : #7171da;
+}
+
+#c3 , #c4{
+	background-color : #e6ffcc;
+	color : #5cb300;
+}
+
+#c5 , #c6{
+	background-color : #ffffcc;
+	color : #e6b800;
+}
+
+.card:hover{
+	box-shadow:0 0 8px #333;
+}

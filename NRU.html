@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title>Page Replacement Algorithms</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link href="pagereplacementpage.css" rel="stylesheet" type="text/css" />	 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+</head>
+
+
+
+<body>
+
+	<div class="icon-bar">
+		<a class="active" href="mainpage1.html"><i class="fa fa-home"></i></a> 
+		<a href="homepage2.html">Create Charts</a>
+		<a href="jobschedulingpage.html">Job Scheduling Algorithms</a>
+		<a href="pagereplacementpage.html">Page Replacement Algorithms</a>
+		<a href="aboutuspage.html">About</a>
+	</div>
+	
+	<div class="sidenav">	
+	  <a class="active" href="mainpage1.html"><i class="fa fa-home"></i></a> 
+	  <a href="pagereplacementpage.html">Optimal Page Repalcement</a>
+	  <a href="NRU.html">NRU Page Replacement</a>
+	  <a href="FIFO.html">FIFO Page Replacement</a>
+	  <a href="SC.html">Second Chance Page Replacement</a>
+	  <a href="LRU.html">LRU Page Replacement</a>
+	 
+	</div>
+
+	<div class="main">
+		
+		<br>
+		<h4>Not Recently Used Page Replacement</h4>
+			
+			The NRU (Not Recently Used) algorithm removes a page at random from the
+			lowest-numbered nonempty class. Implicit in this algorithm is the idea that it is
+			better to remove a modified page that has not been referenced in at least one clock
+			tick (typically about 20 msec) than a clean page that is in heavy use. The main
+			attraction of NRU is that it is easy to understand, moderately efficient to implement,
+			and gives a performance that, while certainly not optimal, may be adequate.<br><br>
+			
+			When a page fault occurs, the operating system inspects all the pages and
+			divides them into four categories based on the current values of their R and M bits:<br>
+	
+			<ul>
+				<li>Class 0: not referenced, not modified.</li>
+				<li>Class 1: not referenced, modified.</li>
+				<li>Class 2: referenced, not modified.</li>
+				<li>Class 3: referenced, modified.</li>
+			</ul>
+		<br>
+		
+			In order to allow the operating system to collect useful page usage statistics,
+			most computers with virtual memory have two status bits, R and M, associated
+			with each page. R is set whenever the page is referenced (read or written). M is
+			set when the page is written to (i.e., modified).<br>
+			If the hardware does not have these bits, they can be simulated using the operating
+			system’s page fault and clock interrupt mechanisms<br>
+		
+		<br>
+		
+	</div>
+
+</body>
+
+
+
+</html>

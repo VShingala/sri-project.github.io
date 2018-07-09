@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title>Job Scheduling Algorithms</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link href="jobschedulingpage.css" rel="stylesheet" type="text/css" />	 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+</head>
+
+
+
+<body>
+
+	<div class="icon-bar">
+		<a class="active" href="mainpage1.html"><i class="fa fa-home"></i></a> 
+		<a href="homepage2.html">Create Charts</a>
+		<a href="jobschedulingpage.html">Job Scheduling Algorithms</a>
+		<a href="pagereplacementpage.html">Page Replacement Algorithms</a>
+		<a href="aboutuspage.html">About</a>
+	</div>
+	
+	<div class="sidenav">	
+	  <a class="active" href="mainpage1.html"><i class="fa fa-home"></i></a> 
+	  <a href="jobschedulingpage.html">First Come First Serve</a>
+	  <a href="SJF.html">Shortest Job First</a>
+	  <a href="SRTN.html">Shortest Remaining Time Next</a>
+	  <a href="RR.html">Round Robin Scheduling</a>
+	  <a href="PS.html">Priority Scheduling</a>
+	  <a href="SPN.html">Shortest Process Next</a>
+	</div>
+
+
+	<div class="main">
+		<br>
+		<h4>First Come First Serve</h4>
+			
+		The simplest of all scheduling algorithms is nonpreemptive first-come first-served. With this algorithm, processes are assigned the CPU in the order they request it. Basically, there is a single queue of ready processes. When the first job enters the system from the outside in the morning, it is started immediately and allowed to run as long as it wants to. As other jobs come in, they are put onto the end of the queue. When the running process blocks, the first process on the queue is run next. When a blocked process becomes ready, like a newly arrived job, it is put on the end of the queue.<br>
+		<br>
+		<ul>
+			<li>Jobs are executed on first come, first serve basis.</li>
+			<li>It is a non-preemptive, pre-emptive scheduling algorithm.</li>
+			<li>Easy to understand and implement.</li>
+			<li>Its implementation is based on FIFO queue.</li>
+			<li>Poor in performance as average wait time is high.</li>
+		</ul>
+		<br>
+		<img class="FCFS" src="FCFS_1.png"><br>
+		<img class="FCFS" src="FCFS_2.png"><br>	
+		<img class="FCFS" src="FCFS_3.png"><br>
+		
+		Average Wait Time : (0+4+6+13) / 4 = 5.75 
+	<br>
+	</div>
+	<script src="jobschedulingpage.js"></script>
+
+</body>
+
+
+
+</html>

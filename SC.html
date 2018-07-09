@@ -1,0 +1,84 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<title>Page Replacement Algorithms</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link href="pagereplacementpage.css" rel="stylesheet" type="text/css" />	 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+</head>
+
+
+
+<body>
+
+	<div class="icon-bar">
+		<a class="active" href="mainpage1.html"><i class="fa fa-home"></i></a> 
+		<a href="homepage2.html">Create Charts</a>
+		<a href="jobschedulingpage.html">Job Scheduling Algorithms</a>
+		<a href="pagereplacementpage.html">Page Replacement Algorithms</a>
+		<a href="aboutuspage.html">About</a>
+	</div>
+	
+	<div class="sidenav">	
+	  <a class="active" href="mainpage1.html"><i class="fa fa-home"></i></a> 
+	  <a href="pagereplacementpage.html">Optimal Page Repalcement</a>
+	  <a href="NRU.html">NRU Page Replacement</a>
+	  <a href="FIFO.html">FIFO Page Replacement</a>
+	  <a href="SC.html">Second Chance Page Replacement</a>
+	  <a href="LRU.html">LRU Page Replacement</a>
+	 
+	</div>
+
+	<div class="main">
+		
+		<br>
+		<h4>Second-Chance Page Replacement</h4>
+			
+			A simple modification to FIFO that avoids the problem of throwing out a heavily
+			used page is to inspect the R bit of the oldest page. If it is 0, the page is both
+			old and unused, so it is replaced immediately. If the R bit is 1, the bit is cleared,
+			the page is put onto the end of the list of pages, and its load time is updated as
+			though it had just arrived in memory. Then the search continues.<br><br>
+			
+			The operation of this algorithm, called second chance, is shown below.
+			In first figure we see pages A through H kept on a linked list and sorted by the
+			time they arrived in memory.<br>
+	
+			<img class="SC" src="SC.png"><br>
+	
+			Second figure shows Page list if a page fault occurs at time 20 and A has its R bit set. The numbers
+			above the pages are their load times.<br><br>
+			
+			Suppose that a page fault occurs at time 20. The oldest page is A, which arrived
+			at time 0, when the process started. If A has the R bit cleared, it is evicted from
+			memory, either by being written to the disk (if it is dirty), or just abandoned (if it is
+			clean). On the other hand, if the R bit is set, A is put onto the end of the list and its
+			<b>load time</b> is reset to the current time (20). The R bit is also cleared. The search
+			for a suitable page continues with B.<br>
+			
+			What second chance is looking for is an old page that has not been referenced
+			in the most recent clock interval. If all the pages have been referenced, second
+			chance degenerates into pure FIFO. Specifically, imagine that all the pages in
+			first figure have their R bits set. One by one, the operating system moves the
+			pages to the end of the list, clearing the R bit each time it appends a page to the end
+			of the list. Eventually, it comes back to page A, which now has its R bit cleared. At
+			this point A is evicted. Thus the algorithm always terminates.
+		<br>
+		<br>
+		
+	</div>
+
+</body>
+
+
+
+</html>

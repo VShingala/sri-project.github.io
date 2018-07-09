@@ -1,0 +1,87 @@
+body{
+	margin: 0;
+	background-color : white;
+	color:#595959;
+}
+
+.icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+	position: fixed;
+}
+
+h3{
+	color: #262626;
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: auto;
+	text-decoration: none;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #4CAF50 !important;
+}
+
+.main_activity{
+	margin-left : 1%;
+	margin-top : 2.2%;
+}
+
+.spin{
+	margin-left: auto;
+    margin-right: auto;
+	display : none;
+	border: 10px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 10px solid #3498db;
+	width: 100px;
+	height: 100px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#university{
+	font-size:48px;
+	color:#555;
+}
+
+#user
+{
+	font-size:55px;
+	color:#555;
+}
+
+#uni{
+	margin-left : 20px;
+	font-size : 20px;
+}
+
+#ur{
+	margin-left : 20px;
+	font-size : 20px;
+	decoration : none;
+	color : #555;
+}
+	
